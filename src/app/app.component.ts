@@ -23,6 +23,6 @@ export class MyApp {
   }
 
   ngOnInit() {
-    this.rootPage = Routes.getRootPage(false);
+    this.rootPage = Routes.getRootPage(true);
   }
 }

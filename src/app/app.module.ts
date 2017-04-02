@@ -46,6 +46,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+<<<<<<< HEAD
    {
      provide: AuthHttp,
      useFactory: getAuthHttp,
@@ -53,6 +54,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
    },
    Endpoints,
    Auth,
+=======
+    {
+      provide: AuthHttp,
+      useFactory: getAuthHttp,
+      deps: [Http]
+    },
+    Endpoints,
+    Auth,
+>>>>>>> step8
   ],
   bootstrap: [IonicApp],
   entryComponents: app.concat(pages),
