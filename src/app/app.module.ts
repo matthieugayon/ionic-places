@@ -1,5 +1,8 @@
-import { NgModule } from '@angular/core';
-import { IonicApp, IonicModule } from 'ionic-angular';
+import { NgModule, ErrorHandler } from '@angular/core';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -8,6 +11,7 @@ import { AddPage } from '../pages/add/add';
 import { AroundPage } from '../pages/around/around';
 import { FriendsPage } from '../pages/friends/friends';
 import { HeaderContentComponent } from '../components/header-content/header-content';
+
 
 const app:Array<any>=[MyApp];
 const pages:Array<any> = [
@@ -28,7 +32,11 @@ const components:Array<any> = [
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
-  entryComponents: app.concat(pages),
-  providers: []
+  entryComponents: app.concat(pages),,
+  providers: [
+    StatusBar,
+    SplashScreen,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
+  ]
 })
 export class AppModule {}
