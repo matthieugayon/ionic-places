@@ -7,7 +7,8 @@ import { AuthHttp, AuthConfig } from 'angular2-jwt';
 import { Http } from '@angular/http';
 import { Storage } from '@ionic/storage';
 import {Endpoints} from '../providers/endpoints'
-import {Auth} from '../providers/auth'
+import {Auth} from '../providers/auth';
+import {Places} from '../providers/places';
 import {Map} from '../components/map/map';
 import {SortAsc} from '../pipes/sort-asc';
 import {GroupBy} from '../pipes/group-by';
@@ -58,6 +59,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     },
     Endpoints,
     Auth,
+    Places,
   ],
   bootstrap: [IonicApp],
   entryComponents: app.concat(pages),
