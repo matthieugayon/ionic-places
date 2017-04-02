@@ -32,7 +32,7 @@ const components:Array<any> = [
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
-  entryComponents: app.concat(pages),,
+  entryComponents: app.concat(pages),
   providers: [
     StatusBar,
     SplashScreen,
