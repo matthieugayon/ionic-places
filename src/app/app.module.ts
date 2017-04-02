@@ -6,9 +6,10 @@ import { Routes } from './app.routes';
 import { AuthHttp, AuthConfig } from 'angular2-jwt';
 import { Http } from '@angular/http';
 import { Storage } from '@ionic/storage';
-import {Endpoints} from '../providers/endpoints'
-import {Auth} from '../providers/auth'
-import {Map} from '../components/map/map';
+import { Camera } from '@ionic-native/camera';
+import { Endpoints } from '../providers/endpoints'
+import { Auth } from '../providers/auth'
+import { Map } from '../components/map/map';
 
 const app:Array<any>=[MyApp];
 const pages:Array<any> = Routes.getPages();
@@ -55,6 +56,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     },
     Endpoints,
     Auth,
+    Camera
   ],
   bootstrap: [IonicApp],
   entryComponents: app.concat(pages),
