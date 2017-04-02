@@ -43,20 +43,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     IonicModule.forRoot(MyApp,appIonicConfig, Routes.getDeepLinkerConfig())
   ],
   providers: [
-   {
-     provide: AuthHttp,
-     useFactory: getAuthHttp,
-     deps: [Http]
-   },
-   Endpoints,
-   Auth,
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: app.concat(pages),
-  providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {
+      provide: AuthHttp,
+      useFactory: getAuthHttp,
+      deps: [Http]
+    },
+    Endpoints,
+    Auth,
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: app.concat(pages)
 })
 export class AppModule {}
