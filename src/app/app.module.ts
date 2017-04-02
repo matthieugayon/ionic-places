@@ -6,6 +6,8 @@ import { Routes } from './app.routes';
 import { AuthHttp, AuthConfig } from 'angular2-jwt';
 import { Http } from '@angular/http';
 import { Storage } from '@ionic/storage';
+import {Camera} from '@ionic-native/camera';
+import {Contacts} from '@ionic-native/contacts';
 import {Endpoints} from '../providers/endpoints'
 import {Auth} from '../providers/auth'
 import {Map} from '../components/map/map';
@@ -57,6 +59,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     },
     Endpoints,
     Auth,
+    Camera,
+    Contacts
   ],
   bootstrap: [IonicApp],
   entryComponents: app.concat(pages),
